@@ -52,3 +52,9 @@ select * from address_book;
 delete from address_book
     -> where fname = 'Suruchi';
 select * from address_book;
+
+#uc6
+select * from address_book
+    -> where city = 'Mumbai' or state = 'Maharashtra';
+select * from address_book
+    -> where city = 'Pune' or state = 'Gujarat';
