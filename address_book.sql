@@ -58,3 +58,8 @@ select * from address_book
     -> where city = 'Mumbai' or state = 'Maharashtra';
 select * from address_book
     -> where city = 'Pune' or state = 'Gujarat';
+
+#uc7
+select city, state, count(*)
+    -> from address_book
+    -> group by city, state;
