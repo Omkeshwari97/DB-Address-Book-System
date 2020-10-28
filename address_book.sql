@@ -21,3 +21,19 @@ alter table address_book
     -> add state varchar(60) not null
     -> after city;
 desc address_book;
+
+#uc3
+insert into address_book (fname, lname, address, city, state, zip, phone, email)
+    -> values
+    -> ('Omkeshwari', 'Pilare', 'Kasturi Kunj, Sion', 'Mumbai', 'Maharashtra', 400022, 9876543210, 'omp@gmail.com');
+select * from address_book;
+insert into address_book (fname, lname, address, city, state, zip, phone, email)
+    -> values
+    -> ('Suruchi', 'Pilare', 'Maheshwari, Matunga', 'Mumbai', 'Maharashtra', 400018, 9876987600, 'abc@gmail.com');
+insert into address_book (fname, lname, address, city, state, zip, phone, email)
+    -> values
+    -> ('Soni', 'Pilare', 'MIDC, Chakan', 'Pune', 'Maharashtra', 400784, 9988776655, 'ksp@gmail.com');
+insert into address_book (fname, lname, address, city, state, zip, phone, email)
+    -> values
+    -> ('Piyush', 'Pilare', 'Gandhi square', 'Surat', 'Gujarat', 500084, 9900711655, 'plzz@gmail.com');
+select * from address_book;
