@@ -17,3 +17,7 @@ create table address_book(
     -> primary key(fname, lname)
     -> );
 desc address_book;
+alter table address_book
+    -> add state varchar(60) not null
+    -> after city;
+desc address_book;
