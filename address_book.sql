@@ -37,3 +37,13 @@ insert into address_book (fname, lname, address, city, state, zip, phone, email)
     -> values
     -> ('Piyush', 'Pilare', 'Gandhi square', 'Surat', 'Gujarat', 500084, 9900711655, 'plzz@gmail.com');
 select * from address_book;
+
+#uc4
+update address_book
+    -> set phone = 9969646413
+    -> where fname = 'Piyush';
+select * from address_book;
+update address_book
+    -> set lname = 'Shelar'
+    -> where fname = 'Soni' ;
+select * from address_book;
