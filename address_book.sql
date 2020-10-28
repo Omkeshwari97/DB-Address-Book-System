@@ -47,3 +47,8 @@ update address_book
     -> set lname = 'Shelar'
     -> where fname = 'Soni' ;
 select * from address_book;
+
+#uc5
+delete from address_book
+    -> where fname = 'Suruchi';
+select * from address_book;
