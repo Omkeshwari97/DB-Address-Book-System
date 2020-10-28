@@ -63,3 +63,9 @@ select * from address_book
 select city, state, count(*)
     -> from address_book
     -> group by city, state;
+
+#uc8
+select *
+    -> from address_book
+    -> where city = 'Mumbai'
+    -> order by fname, lname;
