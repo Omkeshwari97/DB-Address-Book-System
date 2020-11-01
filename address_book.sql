@@ -69,3 +69,25 @@ select *
     -> from address_book
     -> where city = 'Mumbai'
     -> order by fname, lname;
+
+#Changed the primary key of address_book table
+alter table address_book
+    -> add column id integer not null;
+desc address_book;
+alter table address_book
+    -> drop primary key;
+desc address_book;
+update address_book
+    -> set id = 1
+    -> where fname = "Omkeshwari";
+update address_book
+    -> set id = 2
+    -> where fname = "Piyush";
+update address_book
+    -> set id = 3
+    -> where fname = "Soni";
+update address_book
+    -> set id = 4
+    -> where fname = "Suruchi";
+alter table address_book
+    -> add primary key(id);
