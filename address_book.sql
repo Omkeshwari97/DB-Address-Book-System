@@ -91,3 +91,6 @@ update address_book
     -> where fname = "Suruchi";
 alter table address_book
     -> add primary key(id);
+select * from address_book;
+desc address_book;
+  
