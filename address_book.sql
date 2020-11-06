@@ -110,5 +110,29 @@ alter table book_contact_map
     -> add foreign key (book_id) references address_book_details(id);
 
 alter table book_contact_map
-    -> add foreign key (contact_id) references address_book(id);
-  
+    -> add foreign key (contact_id) references address_book(id);	
+
+insert into address_book_details (book_name, book_type)
+    -> values
+    -> ('A1', 'Family'),
+    -> ('A2', 'Friends'),
+    -> ('A3', 'Profession');  
+
+insert into book_contact_map
+    -> (book_id, contact_id)
+    -> values
+    -> (1,1),
+    -> (1,4),
+    -> (2,2),
+    -> (2,3),
+    -> (3,2),
+    -> (3,4);
+
+#uc10
+select book_type, count(*) as contact_count
+    -> from address_book_details, address_book, book_contact_map
+    -> where address_book_details.id = book_contact_map.book_id
+    -> and address_book.id = book_contact_map.contact_id
+    -> group by(book_type);
+
+
