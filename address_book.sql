@@ -93,4 +93,22 @@ alter table address_book
     -> add primary key(id);
 select * from address_book;
 desc address_book;
+
+#uc9
+create table address_book_details (
+    -> id integer not null auto_increment,
+    -> book_name varchar(20) not null,
+    -> book_type varchar(20) not null,
+    -> primary key(id));
+
+create table book_contact_map(
+    -> book_id int not null,
+    -> contact_id int not null
+    -> );
+
+alter table book_contact_map
+    -> add foreign key (book_id) references address_book_details(id);
+
+alter table book_contact_map
+    -> add foreign key (contact_id) references address_book(id);
   
