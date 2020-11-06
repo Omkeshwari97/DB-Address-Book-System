@@ -140,3 +140,18 @@ select fname, book_type
     -> from address_book, address_book_details, book_contact_map
     -> where address_book_details.id = book_contact_map.book_id and
     -> address_book.id = book_contact_map.contact_id;
+
+#uc13
+select * from address_book
+    -> where city = 'Mumbai' or state = 'Maharashtra';
+select * from address_book
+    -> where city = 'Pune' or state = 'Gujarat';
+
+select city, state, count(*)
+    -> from address_book
+    -> group by city, state;
+
+select *
+    -> from address_book
+    -> where city = 'Mumbai'
+    -> order by fname, lname;
