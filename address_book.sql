@@ -135,4 +135,8 @@ select book_type, count(*) as contact_count
     -> and address_book.id = book_contact_map.contact_id
     -> group by(book_type);
 
-
+#uc11
+select fname, book_type
+    -> from address_book, address_book_details, book_contact_map
+    -> where address_book_details.id = book_contact_map.book_id and
+    -> address_book.id = book_contact_map.contact_id;
